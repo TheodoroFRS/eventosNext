@@ -1,0 +1,39 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 1rem;
+    
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+
+    width: auto;
+    height: auto;
+
+    transition: 1s;
+
+}
+
+.card:hover{
+
+    /* transform:  rotateX(360deg)rotateY(360deg); */
+    /* transform:  rotateZ(180deg) rotateY(360deg);  */
+    /* transform: rotate3d(0, 1, 0, 180deg); */
+
+    transform: rotate(10deg) scale(1.1);
+
+}
+
+
+
+.cardTitulo {
+    color: black;
+    padding-bottom: 10px;
+
+    font-size: 40px;
+}
