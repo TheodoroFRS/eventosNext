@@ -29,6 +29,7 @@ function formatarData(data) {
             <>
             {eventos.map(document=>
             <Card 
+            id={document.id}
         titulo={document.titulo}
         dataInicio={formatarData(document.dataInicio)}
         dataFim={formatarData(document.dataFim)}
