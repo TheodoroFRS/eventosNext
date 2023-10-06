@@ -1,5 +1,5 @@
 {
-    "eventos": [
+  "eventos": [
     {
       "id": 2,
       "titulo": "Workshop de Bioinformática Avançada",
@@ -97,84 +97,148 @@
       "local": "IFRO Campus Ariqumes"
     },
     {
-        "id": 14,
-        "titulo": "Conferência Internacional de Big Data em Genômica",
-        "descricao": "Participe desta conferência global que explora o impacto do big data na análise genômica. Descubra as estratégias para lidar com volumes massivos de dados biológicos.",
-        "dataInicio": "2023-12-18",
-        "dataFim": "2023-12-21",
-        "local": "Universidade de São Paulo"
-      },
-      {
-        "id": 15,
-        "titulo": "Workshop de Alinhamento de Sequências",
-        "descricao": "Aprimore suas habilidades em alinhamento de sequências neste workshop prático. Aprenda a interpretar e analisar alinhamentos para obter insights valiosos sobre a evolução e a função das sequências biológicas.",
-        "dataInicio": "2023-11-05",
-        "dataFim": "2023-11-07",
-        "local": "Instituto Butantan - São Paulo"
-      },
-      {
-        "id": 16,
-        "titulo": "Simpósio Nacional de Redes Biológicas",
-        "descricao": "Participe deste simpósio que se concentra na análise e modelagem de redes biológicas. Explore como os avanços em bioinformática estão ajudando a compreender a complexidade dos sistemas biológicos.",
-        "dataInicio": "2023-10-08",
-        "dataFim": "2023-10-10",
-        "local": "Universidade Federal do Rio Grande do Sul"
-      },
-      {
-        "id": 17,
-        "titulo": "Curso de Integração de Dados Genômicos",
-        "descricao": "Este curso oferece uma visão abrangente sobre a integração de dados genômicos de diferentes fontes. Aprenda a combinar informações genômicas para obter uma compreensão holística dos organismos.",
-        "dataInicio": "2023-09-20",
-        "dataFim": "2023-09-22",
-        "local": "Instituto Nacional de Pesquisas da Amazônia - Manaus"
-      },
-      {
-        "id": 18,
-        "titulo": "Hackathon de Bioinformática",
-        "descricao": "Participe deste hackathon dedicado à resolução de desafios em bioinformática. Colabore com uma equipe e aplique suas habilidades de programação e análise de dados para criar soluções inovadoras.",
-        "dataInicio": "2023-11-25",
-        "dataFim": "2023-11-27",
-        "local": "Universidade de Campinas"
-      },
-      {
-        "id": 19,
-        "titulo": "Palestra sobre Edição de Genes com CRISPR-Cas9",
-        "descricao": "Explore as possibilidades da edição de genes com a tecnologia CRISPR-Cas9 nesta palestra informativa. Entenda como essa técnica está revolucionando a manipulação genética e suas aplicações na bioinformática.",
-        "dataInicio": "2023-10-14",
-        "dataFim": "2023-10-14",
-        "local": "Instituto de Pesquisas Biomédicas - Rio de Janeiro"
-      },
-      {
-        "id": 20,
-        "titulo": "Conferência Latino-Americana de Bioinformática",
-        "descricao": "Junte-se a esta conferência regional que reúne profissionais e acadêmicos para discutir os avanços mais recentes em bioinformática na América Latina. Compartilhe ideias e promova colaborações.",
-        "dataInicio": "2023-12-02",
-        "dataFim": "2023-12-04",
-        "local": "Universidade Federal de Minas Gerais"
-      },
-      {
-        "id": 21,
-        "titulo": "Curso de Análise de Variantes Genéticas",
-        "descricao": "Participe deste curso especializado que se concentra na análise de variantes genéticas. Aprenda a identificar e interpretar variações genéticas importantes para a pesquisa e diagnóstico.",
-        "dataInicio": "2023-10-09",
-        "dataFim": "2023-10-11",
-        "local": "Instituto Nacional do Câncer - Rio de Janeiro"
-      },
-      {
-        "id": 22,
-        "titulo": "Seminário sobre Metagenômica Ambiental",
-        "descricao": "Este seminário explora a aplicação da metagenômica no estudo de ambientes naturais. Descubra como analisar comunidades microbianas em diferentes ecossistemas e entender seu papel no meio ambiente.",
-        "dataInicio": "2023-11-02",
-        "dataFim": "2023-11-04",
-        "local": "Universidade Federal de Pernambuco"
-      },
-      {
-        "id": 23,
-        "titulo": "Fórum de Discussão sobre Ferramentas Bioinformáticas",
-        "descricao": "Participe deste fórum interativo que promove a discussão sobre as mais recentes ferramentas e softwares de bioinformática. Compartilhe suas experiências e aprenda com outros profissionais.",
-        "dataInicio": "2023-09-30",
-        "dataFim": "2023-09-30",
-        "local": "Online - Plataforma WebEx"
-      }
-    ]
+      "id": 14,
+      "titulo": "Conferência Internacional de Big Data em Genômica",
+      "descricao": "Participe desta conferência global que explora o impacto do big data na análise genômica. Descubra as estratégias para lidar com volumes massivos de dados biológicos.",
+      "dataInicio": "2023-12-18",
+      "dataFim": "2023-12-21",
+      "local": "Universidade de São Paulo"
+    },
+    {
+      "id": 15,
+      "titulo": "Workshop de Alinhamento de Sequências",
+      "descricao": "Aprimore suas habilidades em alinhamento de sequências neste workshop prático. Aprenda a interpretar e analisar alinhamentos para obter insights valiosos sobre a evolução e a função das sequências biológicas.",
+      "dataInicio": "2023-11-05",
+      "dataFim": "2023-11-07",
+      "local": "Instituto Butantan - São Paulo"
+    },
+    {
+      "id": 16,
+      "titulo": "Simpósio Nacional de Redes Biológicas",
+      "descricao": "Participe deste simpósio que se concentra na análise e modelagem de redes biológicas. Explore como os avanços em bioinformática estão ajudando a compreender a complexidade dos sistemas biológicos.",
+      "dataInicio": "2023-10-08",
+      "dataFim": "2023-10-10",
+      "local": "Universidade Federal do Rio Grande do Sul"
+    },
+    {
+      "id": 17,
+      "titulo": "Curso de Integração de Dados Genômicos",
+      "descricao": "Este curso oferece uma visão abrangente sobre a integração de dados genômicos de diferentes fontes. Aprenda a combinar informações genômicas para obter uma compreensão holística dos organismos.",
+      "dataInicio": "2023-09-20",
+      "dataFim": "2023-09-22",
+      "local": "Instituto Nacional de Pesquisas da Amazônia - Manaus"
+    },
+    {
+      "id": 18,
+      "titulo": "Hackathon de Bioinformática",
+      "descricao": "Participe deste hackathon dedicado à resolução de desafios em bioinformática. Colabore com uma equipe e aplique suas habilidades de programação e análise de dados para criar soluções inovadoras.",
+      "dataInicio": "2023-11-25",
+      "dataFim": "2023-11-27",
+      "local": "Universidade de Campinas"
+    },
+    {
+      "id": 19,
+      "titulo": "Palestra sobre Edição de Genes com CRISPR-Cas9",
+      "descricao": "Explore as possibilidades da edição de genes com a tecnologia CRISPR-Cas9 nesta palestra informativa. Entenda como essa técnica está revolucionando a manipulação genética e suas aplicações na bioinformática.",
+      "dataInicio": "2023-10-14",
+      "dataFim": "2023-10-14",
+      "local": "Instituto de Pesquisas Biomédicas - Rio de Janeiro"
+    },
+    {
+      "id": 20,
+      "titulo": "Conferência Latino-Americana de Bioinformática",
+      "descricao": "Junte-se a esta conferência regional que reúne profissionais e acadêmicos para discutir os avanços mais recentes em bioinformática na América Latina. Compartilhe ideias e promova colaborações.",
+      "dataInicio": "2023-12-02",
+      "dataFim": "2023-12-04",
+      "local": "Universidade Federal de Minas Gerais"
+    },
+    {
+      "id": 21,
+      "titulo": "Curso de Análise de Variantes Genéticas",
+      "descricao": "Participe deste curso especializado que se concentra na análise de variantes genéticas. Aprenda a identificar e interpretar variações genéticas importantes para a pesquisa e diagnóstico.",
+      "dataInicio": "2023-10-09",
+      "dataFim": "2023-10-11",
+      "local": "Instituto Nacional do Câncer - Rio de Janeiro"
+    },
+    {
+      "id": 22,
+      "titulo": "Seminário sobre Metagenômica Ambiental",
+      "descricao": "Este seminário explora a aplicação da metagenômica no estudo de ambientes naturais. Descubra como analisar comunidades microbianas em diferentes ecossistemas e entender seu papel no meio ambiente.",
+      "dataInicio": "2023-11-02",
+      "dataFim": "2023-11-04",
+      "local": "Universidade Federal de Pernambuco"
+    },
+    {
+      "id": 23,
+      "titulo": "Fórum de Discussão sobre Ferramentas Bioinformáticas",
+      "descricao": "Participe deste fórum interativo que promove a discussão sobre as mais recentes ferramentas e softwares de bioinformática. Compartilhe suas experiências e aprenda com outros profissionais.",
+      "dataInicio": "2023-09-30",
+      "dataFim": "2023-09-30",
+      "local": "Online - Plataforma WebEx"
+    },
+    {
+      "titulo": "Docker na Prática",
+      "descricao": "Docker na Prática",
+      "dataInicio": "2023-10-08",
+      "dataFim": "2023-10-06",
+      "local": "aqui",
+      "id": 24
+    },
+    {
+      "titulo": "Docker na Prática",
+      "descricao": "Docker na Prática",
+      "dataInicio": "2023-10-08",
+      "dataFim": "2023-10-06",
+      "local": "aqui",
+      "id": 25
+    },
+    {
+      "titulo": "Docker na Prática",
+      "descricao": "Docker na Prática",
+      "dataInicio": "2023-10-08",
+      "dataFim": "2023-10-06",
+      "local": "aqui",
+      "id": 26
+    },
+    {
+      "titulo": "Mateus sudu rm -f /*",
+      "descricao": "adsfsdhg",
+      "dataInicio": "2023-10-06",
+      "dataFim": "2023-10-07",
+      "local": "2efssdf",
+      "id": 27
+    },
+    {
+      "titulo": "Fslab",
+      "descricao": "fabrica de software",
+      "dataInicio": "2023-10-11",
+      "dataFim": "2023-10-11",
+      "local": "FsLab",
+      "id": 28
+    },
+    {
+      "titulo": "Fslab",
+      "descricao": "fslab",
+      "dataInicio": "2023-10-14",
+      "dataFim": "2023-10-14",
+      "local": "FsLab",
+      "id": 29
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "local": "",
+      "id": 30
+    },
+    {
+      "titulo": "as",
+      "descricao": "as",
+      "dataInicio": "2023-10-13",
+      "dataFim": "",
+      "local": "as",
+      "id": 31
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+.titulo {
+    background-color:var(--cor-primaria);;
+    color: var(--cor-secundaria);
+    padding: 1rem;
+
+    font-family: var(--font-secundaria);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+}

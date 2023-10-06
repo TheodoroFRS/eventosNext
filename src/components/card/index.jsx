@@ -2,7 +2,7 @@ import Link from "next/link"
 import styles from "./styles.module.css"
 import { useEffect, useState } from "react"
 
-export default function Card({ id, titulo, dataInicio, dataFim }) {
+export default function Card({ id, titulo, dataInicio, dataFim, texto, ...props }) {
 
     // const [verso, setVerso] = useState(false);
     // const virar = () => {
@@ -11,7 +11,7 @@ export default function Card({ id, titulo, dataInicio, dataFim }) {
 
     return (
         <>
-            <div className={styles.card}>
+            <div className={styles.card  } {...props} >
                 {/* <div className={styles.conteudo}> */}
             {/* <div className={`${verso ? styles.flipped : ''}`} onClick={virar}> */}
                     <Link href={`/eventos/${id}`} >
@@ -25,6 +25,9 @@ export default function Card({ id, titulo, dataInicio, dataFim }) {
                             <div>Data de fim:{dataFim}</div>
                         </div>
                     </Link>
+    
+                    <h4 className={styles.cardTitulo}>{texto}</h4>
+
                 {/* </div> */}
                 {/* </div> */}
             </div>

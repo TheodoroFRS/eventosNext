@@ -1,0 +1,20 @@
+
+.botao {
+    border: none;
+
+    background-color:var(--cor-terciaria);;
+    color: var(--cor-secundaria);
+
+
+    /* border: 1px solid var(--cor-secundaria); */
+    padding: 12px 100px 12px 100px; 
+
+    font-family: var(--font-primaria);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    width: 319px;
+    height: 44px;
+
+}

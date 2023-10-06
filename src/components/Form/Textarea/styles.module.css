@@ -1,0 +1,14 @@
+.textarea {
+    border: 1px solid var(--cor-terciaria);
+
+    border-radius: 4px;
+ 
+    width: 320px;
+    height: 70px;
+ 
+}
+
+.textarea:focus{
+background-color: var(--cor-focus);
+ 
+}

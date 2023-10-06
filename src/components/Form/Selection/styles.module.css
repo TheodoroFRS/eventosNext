@@ -1,0 +1,14 @@
+.selection{
+   border: 1px solid var(--cor-terciaria);
+
+   border-radius: 4px;
+
+   width: 320px;
+   height: 39px;
+}
+
+
+.selection:focus{
+   background-color: rgba(255, 255, 0, 0.651);
+    
+   }

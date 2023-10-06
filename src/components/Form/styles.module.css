@@ -1,0 +1,25 @@
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao {
+
+    border: none;
+
+    /* border: 1px solid var(--cor-secundaria); */
+    padding: 5px 15px 5px 15px; 
+    border-radius: 10px; 
+}
