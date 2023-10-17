@@ -68,7 +68,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Página Inicial</h1>
+
         <Header texto={"Inscrição"} />
 
         <Container >

@@ -1,12 +1,16 @@
+import Container from "@/components/Container";
+import Header from "@/components/Header";
 import ListCard from "@/components/ListCard";
 
 
 export default function EventoPage() {
 
-    return(
+    return (
         <>
-        <h1>Página do evento</h1>
-         <ListCard/>
+            <Header texto={"Lista de Eventos"} />
+            <Container>
+                <ListCard />
+            </Container>
         </>
     )
 }

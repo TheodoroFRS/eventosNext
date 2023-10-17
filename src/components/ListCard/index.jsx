@@ -19,11 +19,14 @@ export default function ListCard() {
 
     return (
         <>
-            <h1 className={styles.titulo}>Lista de Eventos</h1>
+            {/* <h1 className={styles.titulo}>Lista de Eventos</h1> */}
+
             <div className={styles.listcard}>
+
                 {eventos.length == 0 &&
                     <span>Nenhum estado encontrado!</span>
                 }
+
                 {eventos.length > 0 &&
                     <>
                         {eventos.map(document =>

@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Card from "@/components/card";
+import Evento from "@/components/evento";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react"
@@ -17,17 +17,22 @@ export default function EventosHome() {
             axios.get(`http://localhost:3001/eventos/${id}`)
                 .then(resultado => setEvento(resultado.data))
         }
+        else{
+            console.log('erro evento não encontrado');
+        }
     }, [router])
 
     return (
         <>
             <Header texto={"Detalhe do evento"} />
-            <Card style={{border:"1px solid rgba(0, 0, 0, 0)", hover:"none"}}
+
+            <Evento
                 titulo={evento.titulo}
                 texto={evento.descricao}
                 dataInicio={evento.dataInicio}
                 dataFim={evento.dataFim}
             />
+
         </>
     )
 
