@@ -1,8 +1,20 @@
 {
   "eventos": [
     {
+      "id": 1,
+      "titulo": "Next",
+      "src": "../next.svg",
+      "alt": "Next",
+      "descricao": "Next",
+      "dataInicio": "2023-11-16",
+      "dataFim": "2023-11-24",
+      "local": "IFRO"
+    },
+    {
       "id": 2,
       "titulo": "Workshop de Bioinformática Avançada",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste workshop que explora a integração entre a biologia e a tecnologia da informação, focado em técnicas avançadas de bioinformática. Venha descobrir as inovações que estão moldando o futuro da pesquisa biológica.",
       "dataInicio": "2023-11-15",
       "dataFim": "2023-11-18",
@@ -11,6 +23,8 @@
     {
       "id": 3,
       "titulo": "Simpósio Internacional de Genômica",
+      "src": "../img/Eu.jpg",
+      "alt": "plantação de uvas",
       "descricao": "O Simpósio Internacional de Genômica é um evento global que explora as últimas tendências e descobertas no campo da genômica. Participe para entender como a genômica está revolucionando a nossa compreensão da biologia e da saúde.",
       "dataInicio": "2023-12-05",
       "dataFim": "2023-12-08",
@@ -19,6 +33,8 @@
     {
       "id": 4,
       "titulo": "Curso Prático de Análise de Sequências",
+      "src": "../img/galinha.png",
+      "alt": "plantação de uvas",
       "descricao": "Aprofunde seus conhecimentos práticos em análise de sequências biológicas neste curso intensivo. Aprenda as técnicas essenciais para extrair insights valiosos dos dados genômicos.",
       "dataInicio": "2023-10-30",
       "dataFim": "2023-11-03",
@@ -27,6 +43,8 @@
     {
       "id": 5,
       "titulo": "Congresso de Biotecnologia e Bioinformática",
+      "src": "../img/Inventário.webp",
+      "alt": "plantação de uvas",
       "descricao": "Participe do maior congresso dedicado à interseção da biotecnologia e bioinformática. Este evento reúne especialistas para compartilhar conhecimentos e colaborar na busca por avanços inovadores.",
       "dataInicio": "2023-09-25",
       "dataFim": "2023-09-28",
@@ -35,6 +53,8 @@
     {
       "id": 6,
       "titulo": "Seminário de Bioinformática Aplicada à Medicina",
+      "src": "../img/MicrosoftTeams-image (1).png",
+      "alt": "plantação de uvas",
       "descricao": "Este seminário foca na aplicação prática da bioinformática na medicina, destacando como a análise de dados genômicos está transformando o diagnóstico e tratamento de doenças. Não perca essa oportunidade de aprendizado.",
       "dataInicio": "2023-11-08",
       "dataFim": "2023-11-10",
@@ -43,6 +63,8 @@
     {
       "id": 7,
       "titulo": "Webinar sobre Ferramentas de Bioinformática",
+      "src": "../img/MicrosoftTeams-image (2).png",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste webinar interativo que explora as últimas ferramentas e softwares de bioinformática disponíveis. Descubra como essas ferramentas estão simplificando a análise de dados biológicos.",
       "dataInicio": "2023-10-18",
       "dataFim": "2023-10-18",
@@ -51,6 +73,8 @@
     {
       "id": 8,
       "titulo": "Conferência Nacional de Biologia Computacional",
+      "src": "../img/MicrosoftTeams-image.png",
+      "alt": "plantação de uvas",
       "descricao": "A Conferência Nacional de Biologia Computacional é o encontro anual de profissionais e pesquisadores que compartilham suas descobertas e avanços no campo da biologia computacional. Junte-se a nós para uma troca de conhecimentos enriquecedora.",
       "dataInicio": "2023-11-20",
       "dataFim": "2023-11-24",
@@ -59,6 +83,8 @@
     {
       "id": 9,
       "titulo": "Curso de Introdução à Bioinformática",
+      "src": "../img/ovelha.png",
+      "alt": "plantação de uvas",
       "descricao": "Este curso introdutório oferece uma visão abrangente dos princípios básicos da bioinformática. Ideal para iniciantes que desejam entender o papel da tecnologia da informação na biologia moderna.",
       "dataInicio": "2023-10-12",
       "dataFim": "2023-10-14",
@@ -67,6 +93,8 @@
     {
       "id": 10,
       "titulo": "Encontro de Pesquisadores em Genômica Comparativa",
+      "src": "../img/planta.png",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste encontro que reúne pesquisadores para discutir as últimas pesquisas e avanços em genômica comparativa. Explore as semelhanças e diferenças genéticas entre espécies.",
       "dataInicio": "2023-12-10",
       "dataFim": "2023-12-12",
@@ -75,6 +103,8 @@
     {
       "id": 11,
       "titulo": "Palestra sobre Bioinformática na Agricultura",
+      "src": "../img/plantação de tomate.png",
+      "alt": "plantação de uvas",
       "descricao": "Descubra como a bioinformática está sendo aplicada para otimizar a agricultura e a produção de alimentos. A palestra abordará as inovações tecnológicas que estão impulsionando a sustentabilidade no setor agrícola.",
       "dataInicio": "2023-10-05",
       "dataFim": "2023-10-05",
@@ -83,6 +113,8 @@
     {
       "id": 12,
       "titulo": "Fórum de Inovação em Biologia Computacional",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Este fórum é um espaço para discutir as inovações mais recentes na interseção da biologia e da computação. Explore as tendências que estão moldando o futuro da pesquisa biológica.",
       "dataInicio": "2023-11-28",
       "dataFim": "2023-11-30",
@@ -91,6 +123,8 @@
     {
       "id": 13,
       "titulo": "Curso Avançado de Análise de Metagenomas",
+      "src": "../img/tomate.png",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste curso avançado que se concentra na análise de metagenomas, explorando a diversidade e a funcionalidade das comunidades microbianas. Aprofunde seus conhecimentos em bioinformática aplicada.",
       "dataInicio": "2023-10-19",
       "dataFim": "2023-10-22",
@@ -99,6 +133,8 @@
     {
       "id": 14,
       "titulo": "Conferência Internacional de Big Data em Genômica",
+      "src": "../img/uva.png",
+      "alt": "plantação de uvas",
       "descricao": "Participe desta conferência global que explora o impacto do big data na análise genômica. Descubra as estratégias para lidar com volumes massivos de dados biológicos.",
       "dataInicio": "2023-12-18",
       "dataFim": "2023-12-21",
@@ -107,6 +143,8 @@
     {
       "id": 15,
       "titulo": "Workshop de Alinhamento de Sequências",
+      "src": "./img/vaca.png",
+      "alt": "plantação de uvas",
       "descricao": "Aprimore suas habilidades em alinhamento de sequências neste workshop prático. Aprenda a interpretar e analisar alinhamentos para obter insights valiosos sobre a evolução e a função das sequências biológicas.",
       "dataInicio": "2023-11-05",
       "dataFim": "2023-11-07",
@@ -115,6 +153,8 @@
     {
       "id": 16,
       "titulo": "Simpósio Nacional de Redes Biológicas",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste simpósio que se concentra na análise e modelagem de redes biológicas. Explore como os avanços em bioinformática estão ajudando a compreender a complexidade dos sistemas biológicos.",
       "dataInicio": "2023-10-08",
       "dataFim": "2023-10-10",
@@ -123,6 +163,8 @@
     {
       "id": 17,
       "titulo": "Curso de Integração de Dados Genômicos",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Este curso oferece uma visão abrangente sobre a integração de dados genômicos de diferentes fontes. Aprenda a combinar informações genômicas para obter uma compreensão holística dos organismos.",
       "dataInicio": "2023-09-20",
       "dataFim": "2023-09-22",
@@ -131,6 +173,8 @@
     {
       "id": 18,
       "titulo": "Hackathon de Bioinformática",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste hackathon dedicado à resolução de desafios em bioinformática. Colabore com uma equipe e aplique suas habilidades de programação e análise de dados para criar soluções inovadoras.",
       "dataInicio": "2023-11-25",
       "dataFim": "2023-11-27",
@@ -139,6 +183,8 @@
     {
       "id": 19,
       "titulo": "Palestra sobre Edição de Genes com CRISPR-Cas9",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Explore as possibilidades da edição de genes com a tecnologia CRISPR-Cas9 nesta palestra informativa. Entenda como essa técnica está revolucionando a manipulação genética e suas aplicações na bioinformática.",
       "dataInicio": "2023-10-14",
       "dataFim": "2023-10-14",
@@ -147,6 +193,8 @@
     {
       "id": 20,
       "titulo": "Conferência Latino-Americana de Bioinformática",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Junte-se a esta conferência regional que reúne profissionais e acadêmicos para discutir os avanços mais recentes em bioinformática na América Latina. Compartilhe ideias e promova colaborações.",
       "dataInicio": "2023-12-02",
       "dataFim": "2023-12-04",
@@ -155,6 +203,8 @@
     {
       "id": 21,
       "titulo": "Curso de Análise de Variantes Genéticas",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste curso especializado que se concentra na análise de variantes genéticas. Aprenda a identificar e interpretar variações genéticas importantes para a pesquisa e diagnóstico.",
       "dataInicio": "2023-10-09",
       "dataFim": "2023-10-11",
@@ -163,6 +213,8 @@
     {
       "id": 22,
       "titulo": "Seminário sobre Metagenômica Ambiental",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Este seminário explora a aplicação da metagenômica no estudo de ambientes naturais. Descubra como analisar comunidades microbianas em diferentes ecossistemas e entender seu papel no meio ambiente.",
       "dataInicio": "2023-11-02",
       "dataFim": "2023-11-04",
@@ -171,58 +223,12 @@
     {
       "id": 23,
       "titulo": "Fórum de Discussão sobre Ferramentas Bioinformáticas",
+      "src": "../img/tarafa.jpeg",
+      "alt": "plantação de uvas",
       "descricao": "Participe deste fórum interativo que promove a discussão sobre as mais recentes ferramentas e softwares de bioinformática. Compartilhe suas experiências e aprenda com outros profissionais.",
       "dataInicio": "2023-09-30",
       "dataFim": "2023-09-30",
       "local": "Online - Plataforma WebEx"
-    },
-    {
-      "titulo": "Docker na Prática",
-      "descricao": "Docker na Prática",
-      "dataInicio": "2023-10-08",
-      "dataFim": "2023-10-06",
-      "local": "aqui",
-      "id": 24
-    },
-    {
-      "titulo": "Docker na Prática",
-      "descricao": "Docker na Prática",
-      "dataInicio": "2023-10-08",
-      "dataFim": "2023-10-06",
-      "local": "aqui",
-      "id": 25
-    },
-    {
-      "titulo": "Docker na Prática",
-      "descricao": "Docker na Prática",
-      "dataInicio": "2023-10-08",
-      "dataFim": "2023-10-06",
-      "local": "aqui",
-      "id": 26
-    },
-    {
-      "titulo": "Mateus sudu rm -f /*",
-      "descricao": "adsfsdhg",
-      "dataInicio": "2023-10-06",
-      "dataFim": "2023-10-07",
-      "local": "2efssdf",
-      "id": 27
-    },
-    {
-      "titulo": "Fslab",
-      "descricao": "fabrica de software",
-      "dataInicio": "2023-10-11",
-      "dataFim": "2023-10-11",
-      "local": "FsLab",
-      "id": 28
-    },
-    {
-      "titulo": "Fslab",
-      "descricao": "fslab",
-      "dataInicio": "2023-10-14",
-      "dataFim": "2023-10-14",
-      "local": "FsLab",
-      "id": 29
     }
-     ]
+  ]
 }

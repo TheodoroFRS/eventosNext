@@ -1,27 +1,29 @@
-import Link from "next/link"
+
 import styles from "./styles.module.css"
 
-export default function Evento({ id, titulo, dataInicio, dataFim, texto, ...props }) {
+export default function Evento({ titulo, src, alt, descricao, dataInicio, dataFim, local, ...props }) {
 
     return (
         <>
-            <div className={styles.card  } {...props} >
+            <div className={styles.evento} {...props} >
 
-                    <Link href={`/eventos/${id}`} >
+                <img className={styles.image} src={src} alt={alt} />
 
-                        <div className={styles.frente}>
-                            <h2 className={styles.cardTitulo}>{titulo}</h2>
-                        </div>
+                <h1 className={styles.eventoTitulo}>{titulo}</h1>
 
-                        <div className={styles.verso}>
-                            <div>Data de início:{dataInicio}</div>
-                            <div>Data de fim:{dataFim}</div>
-                        </div>
-                    </Link>
-    
-                    <h4 className={styles.cardTitulo}>{texto}</h4>
+                <div>Data de início: {dataInicio}</div>
+                <div>Data de fim: {dataFim}</div>
 
-            </div>
+                <div>
+                    Local
+                    <h4 className={styles.eventoTitulo}> {local}</h4>
+                </div>
+                
+                <div>
+                    Descrição
+                    <h2 className={styles.eventoTitulo}>{descricao}</h2>
+                </div>
+            </div >
         </>
     )
 

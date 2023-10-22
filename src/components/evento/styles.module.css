@@ -1,27 +1,33 @@
-.card {
+.evento {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    gap: 1rem;
     padding: 1rem;
-    
+    gap: 1rem;
+
     font-size: 20px;
     text-align: center;
 
     width: auto;
     height: auto;
-  
+
+}
+
+.image {
+    width: 50%;
+    height: 248px;
 }
 
 
-.card a {
-    text-decoration: none;
-}
-
-.cardTitulo {
+.eventoTitulo {
     color: black;
     padding-bottom: 10px;
 
-    font-size: 40px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+
+    line-height: 40px;
+    text-align: center;
+
 }

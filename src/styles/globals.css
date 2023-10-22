@@ -7,6 +7,10 @@
   --cor-secundaria:  #ffffff;
   --cor-terciaria: #274156;
   --cor-quaternaria: #ffffff;
+  --cor-preto: #000000;
+
+  --cor-success: #09ff00;
+  --cor-error: #ff0000;
 
   --cor-focus: rgba(255, 255, 0, 0.14);
 

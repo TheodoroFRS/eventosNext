@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Card from "../card";
 import styles from "./styles.module.css"
 import axios from "axios";
+import { api } from "@/service/api";
 export default function ListCard() {
 
     const [eventos, setEventos] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/eventos')
+        api.get('/eventos')
             .then(resultados => setEventos(resultados.data))
     }, [])
 
@@ -33,6 +34,8 @@ export default function ListCard() {
                             <Card
                                 id={document.id}
                                 titulo={document.titulo}
+                                src={document.src}
+                                alt={document.alt}
                                 dataInicio={formatarData(document.dataInicio)}
                                 dataFim={formatarData(document.dataFim)}
                             />

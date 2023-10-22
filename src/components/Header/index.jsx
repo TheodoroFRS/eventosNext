@@ -1,17 +1,30 @@
+import Link from "next/link"
 import styles from "./styles.module.css"
 
 
-export default function Header({texto}) {
+export default function Header({ titulo, navbarBotao1, navbarBotao1Link, navbarBotao2, navbarBotao2Link }) {
 
 
   return (
     <>
-        <header>
-            <h1 className={styles.titulo}>
-               {texto}
-            </h1>
-        </header>
-    
+      <header>
+        <div className={styles.header} >
+          
+          <div className={styles.titulo} >
+            {titulo}
+          </div>
+
+          <nav className={styles.navbar}>
+            <ul className={styles.ul}>
+              <li><Link className={styles.navbar__botoes} href={`${navbarBotao1Link}`}>{navbarBotao1}</Link></li>
+              <li><Link className={styles.navbar__botoes} href={`${navbarBotao2Link}`}>{navbarBotao2}</Link></li>
+
+            </ul>
+          </nav>
+        </div>
+
+      </header>
+
     </>
 
   )
