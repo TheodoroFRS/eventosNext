@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Evento from "@/components/evento";
-import Message from "@/components/mensagem";
+import Message from "@/components/Message";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react"

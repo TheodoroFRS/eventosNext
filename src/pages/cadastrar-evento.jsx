@@ -15,7 +15,8 @@ import Botao from '@/components/Form/Botao'
 import Textarea from '@/components/Form/Textarea'
 import Checkbox from '@/components/Form/Checbox'
 import { api } from "@/service/api";
-import Message from '@/components/mensagem'
+import Message from '@/components/Message'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,8 +33,8 @@ export default function Home() {
     dataInicio: "",
     dataFim: "",
     local: "",
-    src: "",
-    alt: ""
+    src: "../next.svg",
+    alt: "Imagem"
   });
 
   function inserirEvento(e) {
@@ -59,9 +60,7 @@ export default function Home() {
         descricao: "",
         dataInicio: "",
         dataFim: "",
-        local: "",
-        src: "",
-        alt: ""
+        local: ""
       })
 
     } catch (error) {
@@ -86,7 +85,7 @@ export default function Home() {
         {cadastro == true ? (
           <>
             <Message
-            Texto="Cadastro realizado com sucesso"
+              Texto="Cadastro realizado com sucesso"
               tipo="success"
             />
 
@@ -100,9 +99,11 @@ export default function Home() {
               Texto="Cadastro não realizado"
               tipo="error"
             />
+
           </>
 
         )}
+
 
         <Container >
           {/* <Form> */}
@@ -151,20 +152,6 @@ export default function Home() {
                 />
               </div>
 
-              <div className={styles.sub_container} >
-                <Label htmlFor={"imagem"} tipo={evento.titulo}>Imagem:</Label>
-
-                <Label htmlFor={"alt"} tipo={evento.titulo}>texto que descreve a imagem:</Label>
-                <input
-                  tipo="text"
-                  id="alt"
-                  value={evento.alt}
-                  onChange={e => setEvento({ ...evento, alt: e.target.value })}
-                />
-              </div>
-
-
-
               <Container >
                 <Botao type="submit">Realizar inscrição</Botao>
               </Container>
@@ -173,14 +160,16 @@ export default function Home() {
             </div>
           </form>
 
-          <p>Titulo:{evento.titulo}</p>
+          {/* <p>Titulo:{evento.titulo}</p>
           <p>Descrição:{evento.descricao}</p>
           <p>Data de Inicio:{evento.dataInicio}</p>
           <p>Data de Fim:{evento.dataFim}</p>
-          <p>Local:{evento.local}</p>
+          <p>Local:{evento.local}</p> */}
 
-          <p>imagem:{evento.src}</p>
-          <p>alt:{evento.alt}</p>
+
+        </Container>
+
+        <Container >
 
         </Container>
 
