@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
-import { useState } from 'react'
+import { useState } from "react"
 import Container from '@/components/Container'
 import Label from '@/components/Form/Label'
 import Input from '@/components/Form/Input'
@@ -14,21 +14,26 @@ import Selection from '@/components/Form/Selection'
 import Botao from '@/components/Form/Botao'
 import Textarea from '@/components/Form/Textarea'
 import Checkbox from '@/components/Form/Checbox'
-import axios from 'axios'
-
-
-
+import { api } from "@/service/api";
+import Message from '@/components/mensagem'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+
 export default function Home() {
+
+  //  Estado para mostar a message de success ou error
+  const [cadastro, setCadastro] = useState(false);
 
   const [evento, setEvento] = useState({
     titulo: "",
     descricao: "",
     dataInicio: "",
     dataFim: "",
-    local: ""
+    local: "",
+    src: "",
+    alt: ""
   });
 
   function inserirEvento(e) {
@@ -40,22 +45,29 @@ export default function Home() {
       console.log(`Data de Fim: ${evento.dataFim}`);
       console.log(`Local: ${evento.local}`);
 
-      axios.post('http://localhost:3001/eventos', evento)
+      console.log(`src: ${evento.src}`);
+      console.log(`alt: ${evento.alt}`);
+
+      api.post('/eventos', evento)
         .then(resultado => console.log(resultado.data))
         .catch(erro => console.log(erro))
-      alert("Cadastro realizado com sucesso")
+      // alert("Cadastro realizado com sucesso")
+      setCadastro(true)
 
       setEvento({
         titulo: "",
         descricao: "",
         dataInicio: "",
         dataFim: "",
-        local: ""
+        local: "",
+        src: "",
+        alt: ""
       })
 
     } catch (error) {
       console.log(`Deu ruim`);
       alert("Deu ruim")
+      setCadastro(false)
     }
 
 
@@ -69,8 +81,28 @@ export default function Home() {
 
       <main>
 
-        <Header titulo={"Inscrição"} navbarBotao1={"Eventos"}  navbarBotao1Link={"/"}  navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"}/>
+        <Header titulo={"Inscrição"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
 
+        {cadastro == true ? (
+          <>
+            <Message
+            Texto="Cadastro realizado com sucesso"
+              tipo="success"
+            />
+
+          </>
+
+        ) : (
+
+          <>
+
+            <Message
+              Texto="Cadastro não realizado"
+              tipo="error"
+            />
+          </>
+
+        )}
 
         <Container >
           {/* <Form> */}
@@ -119,8 +151,23 @@ export default function Home() {
                 />
               </div>
 
-              <Botao type="submit">Realizar inscrição</Botao>
+              <div className={styles.sub_container} >
+                <Label htmlFor={"imagem"} tipo={evento.titulo}>Imagem:</Label>
 
+                <Label htmlFor={"alt"} tipo={evento.titulo}>texto que descreve a imagem:</Label>
+                <input
+                  tipo="text"
+                  id="alt"
+                  value={evento.alt}
+                  onChange={e => setEvento({ ...evento, alt: e.target.value })}
+                />
+              </div>
+
+
+
+              <Container >
+                <Botao type="submit">Realizar inscrição</Botao>
+              </Container>
 
 
             </div>
@@ -131,6 +178,9 @@ export default function Home() {
           <p>Data de Inicio:{evento.dataInicio}</p>
           <p>Data de Fim:{evento.dataFim}</p>
           <p>Local:{evento.local}</p>
+
+          <p>imagem:{evento.src}</p>
+          <p>alt:{evento.alt}</p>
 
         </Container>
 

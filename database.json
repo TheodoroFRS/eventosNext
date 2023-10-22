@@ -229,6 +229,36 @@
       "dataInicio": "2023-09-30",
       "dataFim": "2023-09-30",
       "local": "Online - Plataforma WebEx"
+    },
+    {
+      "titulo": "Docker na Prática",
+      "descricao": "Docker",
+      "dataInicio": "2023-10-22",
+      "dataFim": "2023-10-24",
+      "local": "FsLab",
+      "src": "",
+      "alt": "alt da image",
+      "id": 24
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "local": "",
+      "src": "",
+      "alt": "",
+      "id": 25
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "local": "",
+      "src": "",
+      "alt": "",
+      "id": 26
     }
   ]
 }

@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Evento from "@/components/evento";
-import Message from "@/components/message";
+import Message from "@/components/mensagem";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react"
@@ -13,34 +13,36 @@ import { api } from "@/service/api";
 export default function EventosHome() {
 
     const [evento, setEvento] = useState({})
-        
-  //  Estado para abrir e fechar o o message
-  const [message, setMessage] = useState(false);
+
+    //  Estado para abrir e fechar o o message
+    const [message, setMessage] = useState(false);
 
     const router = useRouter()
 
     const id = router.query.id
-    
+
+    //as vezes falha
+
     async function getEventos() {
         try {
-            console.log('evento encontrado');
-            const res = await api.get(`http://localhost:3001/eventos/${id}`)
-                       .then(resultado => setEvento(resultado.data));
-                       setMessage(false)
-        } catch (error) {
-          if (error.response.status === 404) {
-            setMessage(true)
-          }
-          console.log("Message",error);
-        }
-      }
-        
-      useEffect(() => {
-        getEventos();
-      }, [router]);
+            const res = await api.get(`/eventos/${id}`)
+                .then(resultado => setEvento(resultado.data));
+            setMessage(false)
 
-// teste que deram errado
-      <>{/* 
+        } catch (error) {
+            if (error.response.status === 404) {
+                setMessage(true)
+            }
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getEventos();
+    }, [router]);
+
+    // teste que deram errado
+    <>{/* 
       // async function getEventos() {
         
     //     try {
@@ -99,16 +101,16 @@ export default function EventosHome() {
     //         console.log('erro evento não encontrado');
     //     }
     // }, [router]) */}
-   
+
     </>
 
 
 
     return (
         <>
+            <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
             {message == true ? (
                 <>
-                    <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
                     <Message
                         Texto="evento não encontrado"
                         tipo="error"
@@ -128,8 +130,7 @@ export default function EventosHome() {
             ) : (
 
                 <>
-                    <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
-                  
+
                     <Message
                         Texto="evento encontrado"
                         tipo="success"
