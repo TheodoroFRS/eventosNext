@@ -5,6 +5,9 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react"
 import { api } from "@/service/api";
+import Botao from "@/components/Form/Botao";
+import Container from "@/components/Container";
+import Link from "next/link";
 
 
 //npm install -g json-server
@@ -108,7 +111,7 @@ export default function EventosHome() {
 
     return (
         <>
-            <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
+            <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
             {message == true ? (
                 <>
                     <Message
@@ -148,6 +151,14 @@ export default function EventosHome() {
                 </>
 
             )}
+            <Container >
+            <Link href={`/AtualizarEvento/${evento?.id}`}>
+            <Botao>
+                Editar
+            </Botao>
+            </Link>
+            </Container>
+
 
         </>
     )

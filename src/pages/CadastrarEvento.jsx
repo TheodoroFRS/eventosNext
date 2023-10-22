@@ -22,7 +22,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 
-export default function Home() {
+export default function CadastrarEvento() {
 
   //  Estado para mostar a message de success ou error
   const [cadastro, setCadastro] = useState(false);
@@ -80,7 +80,7 @@ export default function Home() {
 
       <main>
 
-        <Header titulo={"Inscrição"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/cadastrar-evento"} />
+        <Header titulo={"Inscrição"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
 
         {cadastro == true ? (
           <>
