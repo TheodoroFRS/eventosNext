@@ -85,7 +85,8 @@ export default function CadastrarEvento() {
           <>
             <Message
               Texto="Cadastro realizado com sucesso"
-              tipo="success"
+              ativo={true}
+              success
             />
 
           </>
@@ -96,7 +97,8 @@ export default function CadastrarEvento() {
 
             <Message
               Texto="Cadastro não realizado"
-              tipo="error"
+              //ativo={true}
+              error
             />
 
           </>
@@ -116,12 +118,13 @@ export default function CadastrarEvento() {
                   id="titulo"
                   value={evento.titulo}
                   onChange={e => setEvento({ ...evento, titulo: e.target.value })}
+                  required
                 />
               </div>
 
               <div className={styles.sub_container} >
-                <Label htmlFor="descricao" tipo={evento.descricao}>Descricao:</Label>
-                <textarea id="descricao" rows="4" cols="50" placeholder="Digite seu texto aqui"
+                <Label htmlFor="descricao" tipo={evento.descricao}>Descrição:</Label>
+                <textarea id="descricao" rows="4" cols="50" placeholder="Digite a descricao aqui"  required
                   value={evento.descricao} onChange={e => setEvento({ ...evento, descricao: e.target.value })}></textarea>
                 {/* <Textarea id="descricao" rows="4" cols="50" placeholder="Digite seu texto aqui"
                   value={evento.descricao} onChange={e => setEvento({ ...evento, descricao: e.target.value })}>
@@ -138,7 +141,7 @@ export default function CadastrarEvento() {
 
               <div className={styles.sub_container} >
                 <Label htmlFor={"dataFim"} tipo={evento.dataFim}>Data de Fim:</Label>
-                <input type='date' id="dataFim" value={evento.dataFim} onChange={e => setEvento({ ...evento, dataFim: e.target.value })}></input>
+                <input type='date' id="dataFim" value={evento.dataFim} onChange={e => setEvento({ ...evento, dataFim: e.target.value })} required></input>
               </div>
 
               <div className={styles.sub_container} >
@@ -148,6 +151,7 @@ export default function CadastrarEvento() {
                   id="local"
                   value={evento.local}
                   onChange={e => setEvento({ ...evento, local: e.target.value })}
+                  required
                 />
               </div>
 
@@ -158,6 +162,7 @@ export default function CadastrarEvento() {
                   id="image"
                   value={evento.src}
                   onChange={e => setEvento({ ...evento, src: e.target.value })}
+                  required
                 />
               </div>
 
@@ -168,6 +173,7 @@ export default function CadastrarEvento() {
                   id="alt"
                   value={evento.alt}
                   onChange={e => setEvento({ ...evento, alt: e.target.value })}
+                  required
                 />
               </div>
 

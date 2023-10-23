@@ -3,28 +3,34 @@ import { useEffect, useState } from "react"
 import styles from "./styles.module.css"
 
 
-export default function Message({ Texto, tipo }) { //ativo,
+export default function Message({ Texto, ativo, error, success }) { //ativo,
 
+  const allStyle = {
+    ...(success && { backgroundColor: 'var(--cor-success)' }),
+    ...(error && { backgroundColor: 'var(--cor-error)' })
 
+  };
   return (
     <>
-      {tipo === "error" ? (
+      {ativo === true ? (
 
-        <div className={styles.container}>
-          <div className={styles.error}>
-            <p>{Texto}</p>
+        <>
+          <div className={styles.container}>
+            <div className={styles.caixa} style={allStyle}>
+              <p>{Texto}</p>
+            </div>
           </div>
-        </div>
-
+        </>
       ) : (
 
-        <div className={styles.container}>
-          <div className={styles.success}>
-            <p>{Texto}</p>
-          </div>
-        </div>
+        <>
+
+        </>
+
 
       )}
+
+
 
     </>
   )

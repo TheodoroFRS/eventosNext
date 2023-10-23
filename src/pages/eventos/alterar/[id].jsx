@@ -105,11 +105,31 @@ export default function AtualizarEvento() {
 
             <Header titulo={"Atualizar evento"} />
             <main>
-                {message == true ? (
+            <Message
+                            Texto="evento não encontrado"
+                            ativo={message}
+                            error
+                        />
+
+<Message
+                            Texto="Atualização não realizada"
+                            ativo={atulizado}
+                            error
+                        />
+
+
+                   <Message
+                   Texto="deletado com sucesso"
+                   ativo={deletado}
+                   success
+               />
+                      
+
+                {/* {message == true ? (
                     <>
                         <Message
                             Texto="evento não encontrado"
-                            tipo="error"
+                            error
                         />
                     </>
 
@@ -117,19 +137,17 @@ export default function AtualizarEvento() {
 
                     <>
 
-                        {/* <Message
-                        Texto="evento encontrado"
-                        tipo="success"
-                    /> */}
+                
                     </>
 
-                )}
+                )} 
+                */}
 
-                {atulizado == true ? (
+                {/* {atulizado == true ? (
                     <>
                         <Message
                             Texto="atualizado com sucesso"
-                            tipo="success"
+                            success
                         />
 
                     </>
@@ -140,18 +158,18 @@ export default function AtualizarEvento() {
 
                         <Message
                             Texto="Atualização não realizada"
-                            tipo="error"
+                            error
                         />
 
                     </>
 
-                )}
+                )} */}
 
-                {deletado == true ? (
+                {/* {deletado == true ? (
                     <>
                         <Message
                             Texto="deletado com sucesso"
-                            tipo="success"
+                            success
                         />
 
                     </>
@@ -162,12 +180,12 @@ export default function AtualizarEvento() {
 
                         <Message
                             Texto="erro ao deletar"
-                            tipo="error"
+                            error
                         />
 
                     </>
 
-                )}
+                )} */}
 
 
 
@@ -250,11 +268,11 @@ export default function AtualizarEvento() {
                         <Botao onClick={() => { deletar() }} style={{ backgroundColor: "red" }}>Excluir</Botao>
                     </Container>
 
-                    <p>Titulo:{evento.titulo}</p>
+                    {/* <p>Titulo:{evento.titulo}</p>
                     <p>Descrição:{evento.descricao}</p>
                     <p>Data de Inicio:{evento.dataInicio}</p>
                     <p>Data de Fim:{evento.dataFim}</p>
-                    <p>Local:{evento.local}</p>
+                    <p>Local:{evento.local}</p> */}
 
 
 

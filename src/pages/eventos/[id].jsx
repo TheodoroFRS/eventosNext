@@ -107,7 +107,10 @@ export default function EventosHome() {
 
     </>
 
-
+// function formatarData(data) {
+//     const [ano, mes, dia] = data.split('-');
+//     return `${dia}/${mes}/${ano} `
+// }
 
     return (
         <>
@@ -116,7 +119,8 @@ export default function EventosHome() {
                 <>
                     <Message
                         Texto="evento não encontrado"
-                        tipo="error"
+                        ativo={true}
+                        error
                     />
                     <Evento
                         titulo={evento.titulo}
@@ -136,7 +140,8 @@ export default function EventosHome() {
 
                     <Message
                         Texto="evento encontrado"
-                        tipo="success"
+                        ativo={true}
+                        success
                     />
 
                     <Evento
