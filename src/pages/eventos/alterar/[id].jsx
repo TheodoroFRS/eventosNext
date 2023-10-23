@@ -36,8 +36,8 @@ export default function AtualizarEvento() {
     //  Estado para mostar a message de success ou error
     const [atulizado, setAtulizado] = useState(false);
 
-     //  Estado para mostar a message de success ou error
-     const [deletado, setDeletado] = useState(false);
+    //  Estado para mostar a message de success ou error
+    const [deletado, setDeletado] = useState(false);
 
     const router = useRouter()
 
@@ -70,6 +70,8 @@ export default function AtualizarEvento() {
                 dataInicio: evento.dataInicio,
                 dataFim: evento.dataFim,
                 local: evento.local,
+                src: evento.src,
+                alt: evento.alt,
             });
             setAtulizado(true)
             window.location.href = `/eventos/${evento?.id}`;
@@ -83,7 +85,7 @@ export default function AtualizarEvento() {
 
     async function deletar() {
         try {
-             const resposta = await api.delete(`/eventos/${evento?.id}`);
+            const resposta = await api.delete(`/eventos/${evento?.id}`);
             setDeletado(true)
             window.location.href = `/`;
         } catch (error) {
@@ -93,7 +95,7 @@ export default function AtualizarEvento() {
             setDeletado(false)
         }
     }
-   
+
 
     return (
         <>
@@ -101,7 +103,7 @@ export default function AtualizarEvento() {
                 <title>Atualizar evento</title>
             </Head>
 
-            <Header titulo={"Atualizar evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
+            <Header titulo={"Atualizar evento"} />
             <main>
                 {message == true ? (
                     <>
@@ -216,6 +218,26 @@ export default function AtualizarEvento() {
                                 />
                             </div>
 
+                            <div className={styles.sub_container} >
+                                <Label htmlFor={"image"} tipo={evento.src}>Image:</Label>
+                                <input
+                                    tipo="text"
+                                    id="image"
+                                    value={evento.src}
+                                    onChange={e => setEvento({ ...evento, src: e.target.value })}
+                                />
+                            </div>
+
+                            <div className={styles.sub_container} >
+                                <Label htmlFor={"alt"} tipo={evento.src}>descrição da imagem:</Label>
+                                <input
+                                    tipo="text"
+                                    id="alt"
+                                    value={evento.alt}
+                                    onChange={e => setEvento({ ...evento, alt: e.target.value })}
+                                />
+                            </div>
+
                             <Container >
                                 <Botao type="submit">Editar</Botao>
                             </Container>
@@ -225,7 +247,7 @@ export default function AtualizarEvento() {
                     </form>
 
                     <Container >
-                        <Botao onClick={() => {deletar()}} style={{ backgroundColor: "red" }}>Excluir</Botao>
+                        <Botao onClick={() => { deletar() }} style={{ backgroundColor: "red" }}>Excluir</Botao>
                     </Container>
 
                     <p>Titulo:{evento.titulo}</p>

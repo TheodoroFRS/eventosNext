@@ -34,7 +34,7 @@ export default function CadastrarEvento() {
     dataFim: "",
     local: "",
     src: "../next.svg",
-    alt: "Imagem"
+    alt: "Next"
   });
 
   function inserirEvento(e) {
@@ -148,6 +148,26 @@ export default function CadastrarEvento() {
                   id="local"
                   value={evento.local}
                   onChange={e => setEvento({ ...evento, local: e.target.value })}
+                />
+              </div>
+
+              <div className={styles.sub_container} >
+                <Label htmlFor={"image"} tipo={evento.src}>Image:</Label>
+                <input
+                  tipo="text"
+                  id="image"
+                  value={evento.src}
+                  onChange={e => setEvento({ ...evento, src: e.target.value })}
+                />
+              </div>
+
+              <div className={styles.sub_container} >
+                <Label htmlFor={"alt"} tipo={evento.src}>descrição da imagem:</Label>
+                <input
+                  tipo="text"
+                  id="alt"
+                  value={evento.alt}
+                  onChange={e => setEvento({ ...evento, alt: e.target.value })}
                 />
               </div>
 
