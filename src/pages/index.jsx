@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <>
-            <Header titulo={"Lista de Eventos"} navbarBotao1={"Eventos"}  navbarBotao1Link={"/"}  navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"}/>
+            <Header titulo={"Lista de Eventos"}/>
           
             <Container>
                 <ListCard />

@@ -152,11 +152,15 @@ export default function EventosHome() {
 
             )}
             <Container >
-            <Link href={`/AtualizarEvento/${evento?.id}`}>
-            <Botao>
-                Editar
-            </Botao>
-            </Link>
+                <Link href={`/eventos/alterar/${evento?.id}`}>
+                    <Botao>
+                        Editar
+                    </Botao>
+                </Link>
+            </Container>
+
+            <Container >
+
             </Container>
 
 

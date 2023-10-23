@@ -30,18 +30,20 @@ const inter = Inter({ subsets: ['latin'] })
 export default function AtualizarEvento() {
     const [evento, setEvento] = useState({})
 
-    //  Estado para abrir e fechar o o message
+    //  Estado para abrir e fechar o o message de não encontrado
     const [message, setMessage] = useState(false);
 
     //  Estado para mostar a message de success ou error
     const [atulizado, setAtulizado] = useState(false);
+
+     //  Estado para mostar a message de success ou error
+     const [deletado, setDeletado] = useState(false);
 
     const router = useRouter()
 
     const id = router.query.id
 
     //as vezes falha
-
     async function getEventos() {
         try {
             const res = await api.get(`/eventos/${id}`)
@@ -60,23 +62,38 @@ export default function AtualizarEvento() {
         getEventos();
     }, [router]);
 
-    async function atualizarEvento(data) {
+    async function atualizar() {
         try {
-            const resposta = await api.patch(`/eventos/${evento?._id}`, {
-                titulo: data.titulo,
-                descricao: data.descricao,
-                dataInicio: data.dataInicio,
-                dataFim: data.dataFim,
-                local: data.local,
+            const resposta = await api.patch(`/eventos/${evento?.id}`, {
+                titulo: evento.titulo,
+                descricao: evento.descricao,
+                dataInicio: evento.dataInicio,
+                dataFim: evento.dataFim,
+                local: evento.local,
             });
             setAtulizado(true)
+            window.location.href = `/eventos/${evento?.id}`;
         } catch (error) {
+            console.log(error);
             console.log(`Deu ruim`);
             alert("Deu ruim")
             setAtulizado(false)
-            console.log(error);
         }
     }
+
+    async function deletar() {
+        try {
+             const resposta = await api.delete(`/eventos/${evento?.id}`);
+            setDeletado(true)
+            window.location.href = `/`;
+        } catch (error) {
+            console.log(error);
+            console.log(`Deu ruim`);
+            alert("Deu ruim")
+            setDeletado(false)
+        }
+    }
+   
 
     return (
         <>
@@ -85,7 +102,26 @@ export default function AtualizarEvento() {
             </Head>
 
             <Header titulo={"Atualizar evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
-            <main>            
+            <main>
+                {message == true ? (
+                    <>
+                        <Message
+                            Texto="evento não encontrado"
+                            tipo="error"
+                        />
+                    </>
+
+                ) : (
+
+                    <>
+
+                        {/* <Message
+                        Texto="evento encontrado"
+                        tipo="success"
+                    /> */}
+                    </>
+
+                )}
 
                 {atulizado == true ? (
                     <>
@@ -108,9 +144,34 @@ export default function AtualizarEvento() {
                     </>
 
                 )}
+
+                {deletado == true ? (
+                    <>
+                        <Message
+                            Texto="deletado com sucesso"
+                            tipo="success"
+                        />
+
+                    </>
+
+                ) : (
+
+                    <>
+
+                        <Message
+                            Texto="erro ao deletar"
+                            tipo="error"
+                        />
+
+                    </>
+
+                )}
+
+
+
                 <Container >
                     {/* <Form> */}
-                    <form className={styles.formulario} onSubmit={e => atualizarEvento(e)}>
+                    <form className={styles.formulario} onSubmit={e => atualizar(e)}>
                         <div className={styles.container} >
 
                             <div className={styles.sub_container} >
@@ -156,18 +217,23 @@ export default function AtualizarEvento() {
                             </div>
 
                             <Container >
-                                <Botao type="submit">Realizar inscrição</Botao>
+                                <Botao type="submit">Editar</Botao>
                             </Container>
 
 
                         </div>
                     </form>
 
-                    {/* <p>Titulo:{evento.titulo}</p>
-          <p>Descrição:{evento.descricao}</p>
-          <p>Data de Inicio:{evento.dataInicio}</p>
-          <p>Data de Fim:{evento.dataFim}</p>
-          <p>Local:{evento.local}</p> */}
+                    <Container >
+                        <Botao onClick={() => {deletar()}} style={{ backgroundColor: "red" }}>Excluir</Botao>
+                    </Container>
+
+                    <p>Titulo:{evento.titulo}</p>
+                    <p>Descrição:{evento.descricao}</p>
+                    <p>Data de Inicio:{evento.dataInicio}</p>
+                    <p>Data de Fim:{evento.dataFim}</p>
+                    <p>Local:{evento.local}</p>
+
 
 
                 </Container>

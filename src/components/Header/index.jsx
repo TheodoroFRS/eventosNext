@@ -4,12 +4,18 @@ import styles from "./styles.module.css"
 
 export default function Header({ titulo, navbarBotao1, navbarBotao1Link, navbarBotao2, navbarBotao2Link }) {
 
+  navbarBotao1 = "Eventos"
+  navbarBotao1Link = "/"
+  navbarBotao2 = "Cadastrar evento"
+  navbarBotao2Link = "/CadastrarEvento"
+
+
 
   return (
     <>
       <header>
         <div className={styles.header} >
-          
+
           <div className={styles.titulo} >
             {titulo}
           </div>

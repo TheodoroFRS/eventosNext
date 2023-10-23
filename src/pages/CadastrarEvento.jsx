@@ -62,7 +62,6 @@ export default function CadastrarEvento() {
         dataFim: "",
         local: ""
       })
-
     } catch (error) {
       console.log(`Deu ruim`);
       alert("Deu ruim")
@@ -80,7 +79,7 @@ export default function CadastrarEvento() {
 
       <main>
 
-        <Header titulo={"Inscrição"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
+        <Header titulo={"Inscrição"} />
 
         {cadastro == true ? (
           <>

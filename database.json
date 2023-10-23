@@ -2,7 +2,7 @@
   "eventos": [
     {
       "id": 1,
-      "titulo": "Next",
+      "titulo": "Nexto",
       "src": "../next.svg",
       "alt": "Next",
       "descricao": "Next",
@@ -229,26 +229,6 @@
       "dataInicio": "2023-09-30",
       "dataFim": "2023-09-30",
       "local": "Online - Plataforma WebEx"
-    },
-    {
-      "titulo": "Docker na Prática",
-      "descricao": "Docker",
-      "dataInicio": "2023-10-22",
-      "dataFim": "2023-10-24",
-      "local": "FsLab",
-      "src": "",
-      "alt": "alt da image",
-      "id": 24
-    },
-    {
-      "titulo": "",
-      "descricao": "",
-      "dataInicio": "",
-      "dataFim": "",
-      "local": "",
-      "src": "../next.svg",
-      "alt": "Imagem",
-      "id": 25
     }
   ]
 }
