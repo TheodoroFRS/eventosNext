@@ -3,7 +3,7 @@ import Card from "../card";
 import styles from "./styles.module.css"
 import axios from "axios";
 import { api } from "@/service/api";
-import Message from "../Message";
+import Message from "@/components/message";
 import Container from "../Container";
 import { formatarData } from "@/utils/mascaras";
 
