@@ -62,7 +62,7 @@ export default function AtualizarEvento() {
         getEventos();
     }, [router]);
 
-    async function atualizar() {
+    async function atualizar(e) {
         try {
             const resposta = await api.patch(`/eventos/${evento?.id}`, {
                 titulo: evento.titulo,
@@ -74,7 +74,15 @@ export default function AtualizarEvento() {
                 alt: evento.alt,
             });
             setAtulizado(true)
-            window.location.href = `/eventos/${evento?.id}`;
+            
+            // setTimeout(() => {
+            //    // router.push(`/eventos/${id}`)    
+            //   }, 2000);
+            // router.push(`http://localhost:3000/eventos/${id}`)      
+            setTimeout(() => {
+                router.push(`/`)
+              }, 2000);      
+
         } catch (error) {
             console.log(error);
             console.log(`Deu ruim`);
@@ -87,7 +95,9 @@ export default function AtualizarEvento() {
         try {
             const resposta = await api.delete(`/eventos/${evento?.id}`);
             setDeletado(true)
-            window.location.href = `/`;
+            setTimeout(() => {
+              router.push(`/`)
+            }, 2000);
         } catch (error) {
             console.log(error);
             console.log(`Deu ruim`);
@@ -105,25 +115,25 @@ export default function AtualizarEvento() {
 
             <Header titulo={"Atualizar evento"} />
             <main>
-            <Message
-                            Texto="evento não encontrado"
-                            ativo={message}
-                            error
-                        />
+                <Message
+                    Texto="evento não encontrado"
+                    ativo={message}
+                    error
+                />
 
-<Message
-                            Texto="Atualização não realizada"
-                            ativo={atulizado}
-                            error
-                        />
+                <Message
+                    Texto="Atualização realizada com sucesso"
+                    ativo={atulizado}
+                    success
+                />
 
 
-                   <Message
-                   Texto="deletado com sucesso"
-                   ativo={deletado}
-                   success
-               />
-                      
+                <Message
+                    Texto="deletado com sucesso"
+                    ativo={deletado}
+                    success
+                />
+
 
                 {/* {message == true ? (
                     <>
@@ -137,10 +147,10 @@ export default function AtualizarEvento() {
 
                     <>
 
-                
+
                     </>
 
-                )} 
+                )}
                 */}
 
                 {/* {atulizado == true ? (

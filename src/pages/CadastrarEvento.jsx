@@ -37,7 +37,7 @@ export default function CadastrarEvento() {
     alt: "Next"
   });
 
-  function inserirEvento(e) {
+  async function inserirEvento(e) {
     try {
       // e.preventDefault()
       console.log(`Titulo: ${evento.titulo}`);
@@ -48,8 +48,8 @@ export default function CadastrarEvento() {
 
       console.log(`src: ${evento.src}`);
       console.log(`alt: ${evento.alt}`);
-
-      api.post('/eventos', evento)
+      
+      const res = await api.post('/eventos', evento)
         .then(resultado => console.log(resultado.data))
         .catch(erro => console.log(erro))
       // alert("Cadastro realizado com sucesso")
@@ -63,6 +63,7 @@ export default function CadastrarEvento() {
         local: ""
       })
     } catch (error) {
+      console.log(error);
       console.log(`Deu ruim`);
       alert("Deu ruim")
       setCadastro(false)
