@@ -15,7 +15,7 @@ import Botao from '@/components/Form/Botao'
 import Textarea from '@/components/Form/Textarea'
 import Checkbox from '@/components/Form/Checbox'
 import { api } from "@/service/api";
-import Message from '@/components/Message'
+import Message from "@/components/message";
 
 
 const inter = Inter({ subsets: ['latin'] })

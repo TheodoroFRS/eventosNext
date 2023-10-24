@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Evento from "@/components/evento";
-import Message from "@/components/Message";
+
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react"
@@ -8,6 +8,8 @@ import { api } from "@/service/api";
 import Botao from "@/components/Form/Botao";
 import Container from "@/components/Container";
 import Link from "next/link";
+import Message from "@/components/message";
+import { formatarData } from "@/utils/mascaras";
 
 
 //npm install -g json-server
@@ -28,10 +30,11 @@ export default function EventosHome() {
 
     async function getEventos() {
         try {
+            if(id){
             const res = await api.get(`/eventos/${id}`)
                 .then(resultado => setEvento(resultado.data));
             setMessage(false)
-
+}
         } catch (error) {
             if (error.response.status === 404) {
                 setMessage(true)
@@ -112,7 +115,7 @@ export default function EventosHome() {
 //     return `${dia}/${mes}/${ano} `
 // }
 
-    return (
+    if(evento)return (
         <>
             <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
             {message == true ? (
