@@ -27,14 +27,14 @@ export default function EventosHome() {
     const id = router.query.id
 
     //as vezes falha
-
     async function getEventos() {
         try {
-            if(id){
-            const res = await api.get(`/eventos/${id}`)
-                .then(resultado => setEvento(resultado.data));
-            setMessage(false)
-}
+            if (id) {
+                const res = await api.get(`/eventos/${id}`)
+                setEvento(res.data)
+                // .then(resultado => setEvento(resultado.data));
+                setMessage(false)
+            }
         } catch (error) {
             if (error.response.status === 404) {
                 setMessage(true)
@@ -110,12 +110,12 @@ export default function EventosHome() {
 
     </>
 
-// function formatarData(data) {
-//     const [ano, mes, dia] = data.split('-');
-//     return `${dia}/${mes}/${ano} `
-// }
+    // function formatarData(data) {
+    //     const [ano, mes, dia] = data.split('-');
+    //     return `${dia}/${mes}/${ano} `
+    // }
 
-    if(evento)return (
+  return (
         <>
             <Header titulo={"Detalhe do evento"} navbarBotao1={"Eventos"} navbarBotao1Link={"/"} navbarBotao2={"Cadastrar evento"} navbarBotao2Link={"/CadastrarEvento"} />
             {message == true ? (

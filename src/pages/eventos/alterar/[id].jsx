@@ -47,7 +47,8 @@ export default function AtualizarEvento() {
     async function getEventos() {
         try {
             const res = await api.get(`/eventos/${id}`)
-                .then(resultado => setEvento(resultado.data));
+            setEvento(res.data)
+                // .then(resultado => setEvento(resultado.data));
             setMessage(false)
 
         } catch (error) {
@@ -63,6 +64,7 @@ export default function AtualizarEvento() {
     }, [router]);
 
     async function atualizar(e) {
+        e.preventDefault()
         try {
             const resposta = await api.patch(`/eventos/${evento?.id}`, {
                 titulo: evento.titulo,
@@ -75,13 +77,9 @@ export default function AtualizarEvento() {
             });
             setAtulizado(true)
             
-            // setTimeout(() => {
-            //    // router.push(`/eventos/${id}`)    
-            //   }, 2000);
-            // router.push(`http://localhost:3000/eventos/${id}`)      
             setTimeout(() => {
-                router.push(`/`)
-              }, 2000);      
+                router.push(`http://localhost:3000/eventos/${evento?.id}`)     
+              }, 1000);   
 
         } catch (error) {
             console.log(error);

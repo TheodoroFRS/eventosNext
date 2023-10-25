@@ -39,7 +39,7 @@ export default function CadastrarEvento() {
 
   async function inserirEvento(e) {
     try {
-      // e.preventDefault()
+      e.preventDefault()
       console.log(`Titulo: ${evento.titulo}`);
       console.log(`descrição: ${evento.descricao}`);
       console.log(`Data de Inicio: ${evento.dataInicio}`);
@@ -48,10 +48,10 @@ export default function CadastrarEvento() {
 
       console.log(`src: ${evento.src}`);
       console.log(`alt: ${evento.alt}`);
-      
+
       const res = await api.post('/eventos', evento)
-        .then(resultado => console.log(resultado.data))
-        .catch(erro => console.log(erro))
+      // .then(resultado => console.log(resultado.data))
+      // .catch(erro => console.log(erro))
       // alert("Cadastro realizado com sucesso")
       setCadastro(true)
 
@@ -125,7 +125,7 @@ export default function CadastrarEvento() {
 
               <div className={styles.sub_container} >
                 <Label htmlFor="descricao" tipo={evento.descricao}>Descrição:</Label>
-                <textarea id="descricao" rows="4" cols="50" placeholder="Digite a descricao aqui"  required
+                <textarea id="descricao" rows="4" cols="50" placeholder="Digite a descricao aqui" required
                   value={evento.descricao} onChange={e => setEvento({ ...evento, descricao: e.target.value })}></textarea>
                 {/* <Textarea id="descricao" rows="4" cols="50" placeholder="Digite seu texto aqui"
                   value={evento.descricao} onChange={e => setEvento({ ...evento, descricao: e.target.value })}>
